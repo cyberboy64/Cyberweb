@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIM Info Finder | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: #000e0e;
+      font-family: 'Poppins', sans-serif;
+      color: #00ff99;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tool-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .tool-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00ff99;
+    }
+
+    .tool-card {
+      background: rgba(0, 255, 153, 0.05);
+      border: 1px solid #00ff99;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 0 25px #00ff99;
+      text-align: center;
+    }
+
+    .tool-card input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 25px;
+      background: rgba(0, 255, 153, 0.1);
+      color: #00ff99;
+      font-size: 16px;
+      box-shadow: 0 0 8px #00ff99;
+      outline: none;
+    }
+
+    .tool-card input::placeholder {
+      color: #66ffcc;
+    }
+
+    .tool-card button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ff99;
+      transition: 0.3s ease;
+    }
+
+    .tool-card button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0, 255, 153, 0.1);
+      border-radius: 10px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+
+<body onload="checkLogin()">
+  <div class="tool-header">
+    <h1>🔍 SIM Info Finder</h1>
+  </div>
+
+  <div class="tool-card">
+    <input type="text" id="simInput" placeholder="Enter Mobile Number" />
+    <button onclick="findSIM()">Get Info</button>
+    <div class="result" id="simResult">Awaiting input...</div>
+  </div>
+
+  <script>
+    function checkLogin() {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+      if (isLoggedIn !== "true") {
+        alert("🔐 Please login to access this tool.");
+        window.location.href = "login.html";
+      }
+    }
+
+    function findSIM() {
+      const input = document.getElementById("simInput").value.trim();
+      const result = document.getElementById("simResult");
+
+      if (!input || input.length < 10 || isNaN(input)) {
+        result.textContent = "Please enter a valid 10-digit mobile number.";
+        return;
+      }
+
+      let carrier = "Unknown";
+      let circle = "Unknown";
+
+      // Fake operator detection
+      if (/^98|^97/.test(input)) carrier = "Airtel";
+      else if (/^91|^93/.test(input)) carrier = "Jio";
+      else if (/^94|^95/.test(input)) carrier = "VI";
+
+      // Fake circle detection
+      if (/^98/.test(input)) circle = "Delhi";
+      else if (/^91/.test(input)) circle = "UP East";
+      else if (/^94/.test(input)) circle = "Maharashtra";
+
+      result.textContent = 
+        `📱 Carrier: ${carrier}\n` +
+        `🌐 Circle: ${circle}\n` +
+        `📅 Activation: 2019 (Estimated)\n` +
+        `🛰️ Network Type: 4G`;
+    }
+  </script>
+</body>
+</html>

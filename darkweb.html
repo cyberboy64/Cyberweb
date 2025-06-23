@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Web Access | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000e0e;
+      color: #00ff99;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tool-header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .tool-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00ff99;
+    }
+
+    .dark-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: rgba(0, 255, 153, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00ff99;
+      text-align: center;
+    }
+
+    .dark-container p {
+      margin-bottom: 20px;
+    }
+
+    .dark-input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      background: #000;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      font-size: 16px;
+    }
+
+    .access-button {
+      padding: 12px 30px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ff99;
+      transition: 0.3s;
+    }
+
+    .access-button:hover {
+      background: #000;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+    }
+
+    .result-box {
+      margin-top: 20px;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-header">
+    <h1>🕸️ Dark Web Access</h1>
+  </div>
+
+  <div class="dark-container">
+    <p>Enter Onion URL to simulate dark web access.</p>
+    <input type="text" class="dark-input" id="onionUrl" placeholder="e.g. abc123xyz.onion" />
+    <button class="access-button" onclick="simulateAccess()">Access</button>
+    <div class="result-box" id="darkResult"></div>
+  </div>
+
+  <script>
+    function simulateAccess() {
+      const input = document.getElementById("onionUrl").value;
+      const result = document.getElementById("darkResult");
+
+      if (input.trim() === "") {
+        result.innerText = "❌ Please enter a valid .onion URL";
+        return;
+      }
+
+      result.innerText = "🕸️ Connecting to Dark Web...";
+      setTimeout(() => {
+        result.innerText = `✅ Access granted to ${input} (Simulated)`;
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

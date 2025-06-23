@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Finder | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000e0e;
+      color: #00ff99;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tool-header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .tool-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00ff99;
+    }
+
+    .email-box {
+      max-width: 600px;
+      margin: 20px auto;
+      background: rgba(0, 255, 153, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00ff99;
+      text-align: center;
+    }
+
+    .email-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+      background: #000;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      font-size: 16px;
+    }
+
+    .search-button {
+      padding: 12px 30px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ff99;
+      transition: 0.3s;
+    }
+
+    .search-button:hover {
+      background: #000;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-header">
+    <h1>📧 Email Finder</h1>
+  </div>
+
+  <div class="email-box">
+    <p>Enter username to find linked email (Simulation Only)</p>
+    <input type="text" id="username" placeholder="Enter username e.g. cyberboy007" />
+    <button class="search-button" onclick="findEmail()">Search Email</button>
+    <div class="result" id="resultBox"></div>
+  </div>
+
+  <script>
+    function findEmail() {
+      const username = document.getElementById("username").value.trim();
+      const result = document.getElementById("resultBox");
+
+      if (!username) {
+        result.innerText = "❌ Please enter a valid username.";
+        return;
+      }
+
+      result.innerText = "🔎 Scanning the deep web for emails...";
+      setTimeout(() => {
+        result.innerText = `📬 Email found: ${username}@protonmail.com (Simulation)`;
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <img src="assets/logo.png" class="auth-logo" />
+    <h2>Login to <span>Cyber Boy</span></h2>
+
+    <input type="email" id="email" placeholder="Email Address" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="loginUser()">Login</button>
+
+    <p>Don't have an account? <a href="register.html">Register now</a></p>
+  </div>
+
+  <script type="module" src="login.js"></script>
+  
+  <script>
+  function checkLogin(toolPage) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+      window.location.href = toolPage;
+    } else {
+      alert("🔒 Please login to access tools.");
+      window.location.href = "login.html";
+    }
+  }
+</script>
+</body>
+</html>

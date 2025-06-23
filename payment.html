@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Boy | Payment</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000e0e;
+      color: #00ff99;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.8);
+      border-bottom: 2px solid #00ff99;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    header .logo h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff99;
+    }
+
+    .payment-container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: rgba(0, 255, 153, 0.05);
+      border: 1px solid #00ff99;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00ff99;
+      text-align: center;
+    }
+
+    .payment-container h2 {
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px #00ff99;
+    }
+
+    .plan-select {
+      margin: 20px 0;
+    }
+
+    .plan-select select {
+      padding: 10px;
+      font-size: 1rem;
+      background: #000;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      border-radius: 5px;
+    }
+
+    .pay-btn {
+      background: #00ff99;
+      color: #000;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .pay-btn:hover {
+      background: #00e699;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Cyber Boy" />
+      <h1>Cyber Boy</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html">Tools</a>
+      <a href="payment.html" class="active">Payment</a>
+    </nav>
+  </header>
+
+  <div class="payment-container">
+    <h2>💳 Choose Your Plan</h2>
+
+    <div class="plan-select">
+      <label for="plans">Select Plan:</label><br/><br/>
+      <select id="plans">
+        <option value="999">Hacker Plan - ₹999</option>
+        <option value="9999">Elite Plan - ₹9999</option>
+      </select>
+    </div>
+
+    <button class="pay-btn" onclick="makePayment()">Pay Now</button>
+  </div>
+
+  <script>
+    function makePayment() {
+      const plan = document.getElementById("plans").value;
+      alert("🔐 Payment system is under development.\nYou selected plan of ₹" + plan);
+    }
+  </script>
+</body>
+</html>
+
+<!-- Animated Premium Zone Title with Fade Effect -->
+<section style="background:#000e0e; padding:40px 20px; text-align:center;">
+  <h2 id="fade-text" style="color:#00ff99; font-family:'Orbitron',sans-serif; font-size:2rem; opacity:0; transition:opacity 0.6s ease;">
+    ⚡ Welcome to Cyber Boy Premium Zone
+  </h2>
+</section>
+
+<script>
+  const fadeText = document.getElementById("fade-text");
+  let visible = false;
+
+  setInterval(() => {
+    visible = !visible;
+    fadeText.style.opacity = visible ? "1" : "0";
+  }, 800); // 800ms = fast fade in/out
+</script>
+
+<!-- Why Choose Us Section -->
+<section style="background:#000e0e; padding:40px 30px; color:#00ff99; text-align:center;">
+  <h2 style="font-family:'Orbitron',sans-serif; font-size:2rem; margin-bottom:20px;">🌟 Why Choose Cyber Boy?</h2>
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-top:20px;">
+    <div style="max-width:300px;">
+      <img src="assets/icons/secure.png" alt="Secure" style="width:60px;">
+      <h3>Secure Platform</h3>
+      <p>We prioritize safety, privacy, and encryption for all users.</p>
+    </div>
+    <div style="max-width:300px;">
+      <img src="assets/icons/tools.png" alt="Tools" style="width:60px;">
+      <h3>2000+ Tools</h3>
+      <p>Most advanced tools for ethical hacking and cyber investigation.</p>
+    </div>
+    <div style="max-width:300px;">
+      <img src="assets/icons/support.png" alt="Support" style="width:60px;">
+      <h3>24/7 Support</h3>
+      <p>Always here to help with any query, anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Premium Benefits -->
+<section style="background:#001a1a; padding:40px 30px; color:#00ff99; text-align:center;">
+  <h2 style="font-family:'Orbitron',sans-serif; font-size:2rem; margin-bottom:20px;">💎 Premium Members Get</h2>
+  <ul style="list-style:none; padding:0; font-size:1.1rem;">
+    <li>✅ Private Telegram Tools Access</li>
+    <li>✅ Zero Detection RATs</li>
+    <li>✅ Premium Scripts & APIs</li>
+    <li>✅ Early Access to New Tools</li>
+    <li>✅ Lifetime Support & Updates</li>
+  </ul>
+</section>
+
+<!-- Hacker 3D Cube with Smoke -->
+<section style="background:#000e0e; padding:80px 0; text-align:center; position:relative; overflow:hidden;">
+  <div class="cube-container">
+    <div class="cube">
+      <div class="face front">CYBER</div>
+      <div class="face back">BOY</div>
+      <div class="face right">HACK</div>
+      <div class="face left">TOOLS</div>
+      <div class="face top">💻</div>
+      <div class="face bottom">☠️</div>
+    </div>
+  </div>
+
+  <!-- SMOKE -->
+  <div class="smoke"></div>
+</section>
+
+<style>
+.cube-container {
+  perspective: 1000px;
+}
+
+.cube {
+  position: relative;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  animation: spinCube 6s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(0,255,153,0.07);
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  line-height: 120px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ff99;
+}
+
+.front  { transform: rotateY(0deg) translateZ(60px); }
+.back   { transform: rotateY(180deg) translateZ(60px); }
+.right  { transform: rotateY(90deg) translateZ(60px); }
+.left   { transform: rotateY(-90deg) translateZ(60px); }
+.top    { transform: rotateX(90deg) translateZ(60px); }
+.bottom { transform: rotateX(-90deg) translateZ(60px); }
+
+@keyframes spinCube {
+  0%   { transform: rotateX(0) rotateY(0); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Smoke Animation */
+.smoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(0,255,153,0.2) 0%, rgba(0,255,153,0) 70%);
+  animation: smokeFloat 6s ease-in-out infinite;
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@keyframes smokeFloat {
+  0% { transform: translate(-50%, -60%) scale(1); opacity: 0.4; }
+  50% { transform: translate(-50%, -100%) scale(1.3); opacity: 0.1; }
+  100% { transform: translate(-50%, -60%) scale(1); opacity: 0.4; }
+}
+</style>

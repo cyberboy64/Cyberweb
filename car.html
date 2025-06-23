@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vehicle Tracker | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: #000e0e;
+      font-family: 'Poppins', sans-serif;
+      color: #00ff99;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tool-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .tool-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00ff99;
+    }
+
+    .tool-card {
+      background: rgba(0, 255, 153, 0.05);
+      border: 1px solid #00ff99;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 0 25px #00ff99;
+      text-align: center;
+    }
+
+    .tool-card input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 25px;
+      background: rgba(0, 255, 153, 0.1);
+      color: #00ff99;
+      font-size: 16px;
+      box-shadow: 0 0 8px #00ff99;
+      outline: none;
+    }
+
+    .tool-card input::placeholder {
+      color: #66ffcc;
+    }
+
+    .tool-card button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ff99;
+      transition: 0.3s ease;
+    }
+
+    .tool-card button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0, 255, 153, 0.1);
+      border-radius: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-header">
+    <h1>🚗 Vehicle Tracker</h1>
+  </div>
+
+  <div class="tool-card">
+    <input type="text" id="carNumber" placeholder="Enter Vehicle Number (e.g., DL8CAF5031)" />
+    <button onclick="trackCar()">Search</button>
+    <div class="result" id="carResult">Awaiting vehicle number...</div>
+  </div>
+
+  <script>
+    function trackCar() {
+      const input = document.getElementById("carNumber").value;
+      const result = document.getElementById("carResult");
+      if (!input.trim()) {
+        result.textContent = "Please enter a valid vehicle number.";
+        return;
+      }
+
+      // Demo output
+      result.innerHTML = `
+        🧾 Owner Name: Rakesh Sharma<br>
+        🚗 Model: Hyundai i20<br>
+        🛠️ Registration: Delhi, DL<br>
+        🧪 Fuel Type: Petrol<br>
+        📅 Reg Date: 2018-09-21
+      `;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Tools | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: #000e0e;
+      font-family: 'Poppins', sans-serif;
+      color: #00ff99;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tool-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .tool-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00ff99;
+    }
+
+    .tool-card {
+      background: rgba(0, 255, 153, 0.05);
+      border: 1px solid #00ff99;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 0 25px #00ff99;
+      text-align: center;
+    }
+
+    .tool-card input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 25px;
+      background: rgba(0, 255, 153, 0.1);
+      color: #00ff99;
+      font-size: 16px;
+      box-shadow: 0 0 8px #00ff99;
+      outline: none;
+    }
+
+    .tool-card input::placeholder {
+      color: #66ffcc;
+    }
+
+    .tool-card button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ff99;
+      transition: 0.3s ease;
+    }
+
+    .tool-card button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0, 255, 153, 0.1);
+      border-radius: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-header">
+    <h1>📱 WhatsApp Tools</h1>
+  </div>
+
+  <div class="tool-card">
+    <input type="text" id="wa" placeholder="Enter WhatsApp Number (e.g., +91XXXXXXXXXX)" />
+    <button onclick="checkWhatsApp()">Track</button>
+    <div class="result" id="waResult">Awaiting Number...</div>
+  </div>
+
+  <script>
+    function checkWhatsApp() {
+      const input = document.getElementById("wa").value;
+      const result = document.getElementById("waResult");
+
+      if (!input.trim()) {
+        result.textContent = "Please enter a valid WhatsApp number.";
+        return;
+      }
+
+      // Dummy Result (You can link API if needed)
+      result.innerHTML = `
+        ✅ Number is on WhatsApp<br>
+        👤 Name: Unknown<br>
+        📸 Profile Pic: Found<br>
+        🕒 Last Seen: Today at 9:20 PM
+      `;
+    }
+  </script>
+</body>
+</html>

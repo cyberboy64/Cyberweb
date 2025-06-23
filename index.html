@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Boy | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Cyber Boy" />
+      <h1>Cyber Boy</h1>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="tools.html">Tools</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Sign Up</a>
+      
+      <a href="payment.html">Buy Plan</a>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/icons/hackerbanner.png" alt="Banner" class="hero-img">
+    <div class="hero-text">
+      <h2>Welcome to <span>Cyber Boy</span></h2>
+      <p>Protecting your digital identity with top-level hacking tools for ethical use.</p>
+      <a href="#" class="btn" onclick="goToTools()">Explore Tools</a>
+    </div>
+  </section>
+
+<!-- Plans -->
+<section class="plans">
+  <h2>Choose Your Plan</h2>
+  <div class="plan-cards">
+    <div class="plan">
+      <h3>Basic</h3>
+      <p>₹0/month</p>
+      <ul>
+        <li>100+ Tools</li>
+        <li>Free Access</li>
+        <li>Basic Support</li>
+      </ul>
+      <a href="tools.html" class="btn">Get Started</a> <!-- ✅ Free users go to Tools -->
+    </div>
+    <div class="plan hacker">
+      <h3>Hacker Plan</h3>
+      <p>₹999/month</p>
+      <ul>
+        <li>2000+ Tools</li>
+        <li>1 Click Automations</li>
+        <li>Hacker Community</li>
+      </ul>
+      <a href="payment.html" class="btn">Join Now</a>
+    </div>
+    <div class="plan elite">
+      <h3>Elite</h3>
+      <p>₹9999/month</p>
+      <ul>
+        <li>All Premium Tools</li>
+        <li>Private API Access</li>
+        <li>24/7 Support</li>
+      </ul>
+      <a href="payment.html" class="btn">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Tools Preview -->
+<section class="tools-preview">
+  <h2>Powerful Hacking Tools</h2>
+  <div class="tool-grid">
+    <div class="tool-card" onclick="checkLogin('simcard.html')">SIM Info</div>
+    <div class="tool-card" onclick="checkLogin('phone.html')">Phone Tracker</div>
+    <div class="tool-card" onclick="checkLogin('car.html')">Vehicle Tracker</div>
+    <div class="tool-card" onclick="checkLogin('upi.html')">UPI Checker</div>
+    <div class="tool-card" onclick="checkLogin('whatsapp.html')">WhatsApp Hack</div>
+  </div>
+  <a href="#" class="btn" onclick="goToTools()">View All Tools</a>
+</section>
+
+<script>
+  function goToTools() {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+      window.location.href = "tools.html";
+    } else {
+      alert("🔒 Please login to access tools.");
+      window.location.href = "login.html";
+    }
+  }
+  
+  function checkLogin(toolPage) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+      window.location.href = toolPage;
+    } else {
+      alert("🔐 Please login to access this tool.");
+      window.location.href = "login.html";
+    }
+  }
+</script>
+
+
+<!-- Tools Video Showcase -->
+<section class="video-section" style="background:#000e0e; padding:40px 20px; color:#00ff99;">
+  <h2 style="text-align:center; font-family:'Orbitron',sans-serif; font-size:2rem; margin-bottom:30px;">🎬 Cyber Boy Tools Showcase</h2>
+  
+  <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center;">
+    
+    <!-- Dragon RAT -->
+    <div style="max-width:400px;">
+      <h3 style="text-align:center;">🐲 Dragon RAT</h3>
+      <video controls width="100%" poster="assets/thumbnails/dragon_rat.jpg" style="border:2px solid #00ff99; border-radius:12px;">
+        <source src="assets/videos/dragon_rat.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div style="text-align:center; margin-top:10px;">
+        <a href="assets/videos/dragon_rat.mp4" target="_blank" style="padding:8px 20px; background:#00ff99; color:#000; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">▶️ Play</a>
+        <a href="https://whatsapp.com/channel/0029VafaWfZ8fewulpJxRe2M" target="_blank" style="padding:8px 20px; background:#ff0066; color:#fff; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">📥 Download APK</a>
+      </div>
+    </div>
+    
+    <!-- Spider RAT -->
+    <div style="max-width:400px;">
+      <h3 style="text-align:center;">🕷️ Spider RAT</h3>
+      <video controls width="100%" poster="assets/thumbnails/spider_rat.jpg" style="border:2px solid #00ff99; border-radius:12px;">
+        <source src="assets/videos/spider_rat.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div style="text-align:center; margin-top:10px;">
+        <a href="assets/videos/spider_rat.mp4" target="_blank" style="padding:8px 20px; background:#00ff99; color:#000; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">▶️ Play</a>
+        <a href="https://whatsapp.com/channel/0029VafaWfZ8fewulpJxRe2M" target="_blank" style="padding:8px 20px; background:#ff0066; color:#fff; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">📥 Download APK</a>
+      </div>
+    </div>
+    
+    <!-- Screen Capture Tool -->
+    <div style="max-width:400px;">
+      <h3 style="text-align:center;">📸 Screen Capture</h3>
+      <video controls width="100%" poster="assets/thumbnails/screen_capture.jpg" style="border:2px solid #00ff99; border-radius:12px;">
+        <source src="assets/videos/screen_capture.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div style="text-align:center; margin-top:10px;">
+        <a href="assets/videos/screen_capture.mp4" target="_blank" style="padding:8px 20px; background:#00ff99; color:#000; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">▶️ Play</a>
+        <a href="https://whatsapp.com/channel/0029VafaWfZ8fewulpJxRe2M" target="_blank" style="padding:8px 20px; background:#ff0066; color:#fff; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">📥 Download APK</a>
+      </div>
+    </div>
+    
+    <!-- Fake Number Tool -->
+    <div style="max-width:400px;">
+      <h3 style="text-align:center;">📞 Fake Number Generator</h3>
+      <video controls width="100%" poster="assets/thumbnails/fake_number.jpg" style="border:2px solid #00ff99; border-radius:12px;">
+        <source src="assets/videos/fake_number.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div style="text-align:center; margin-top:10px;">
+        <a href="assets/videos/fake_number.mp4" target="_blank" style="padding:8px 20px; background:#00ff99; color:#000; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">▶️ Play</a>
+        <a href="https://whatsapp.com/channel/0029VafaWfZ8fewulpJxRe2M" target="_blank" style="padding:8px 20px; background:#ff0066; color:#fff; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">📥 Download APK</a>
+      </div>
+    </div>
+    
+    <!-- Cyber RAT -->
+    <div style="max-width:400px;">
+      <h3 style="text-align:center;">💻 Cyber RAT</h3>
+      <video controls width="100%" poster="assets/thumbnails/cyber_rat.jpg" style="border:2px solid #00ff99; border-radius:12px;">
+        <source src="assets/videos/cyber_rat.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div style="text-align:center; margin-top:10px;">
+        <a href="assets/videos/cyber_rat.mp4" target="_blank" style="padding:8px 20px; background:#00ff99; color:#000; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">▶️ Play</a>
+        <a href="https://whatsapp.com/channel/0029VafaWfZ8fewulpJxRe2M" target="_blank" style="padding:8px 20px; background:#ff0066; color:#fff; font-weight:bold; border-radius:8px; margin:5px; text-decoration:none;">📥 Download APK</a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- Contact Section -->
+<section class="contact" style="background:#000e0e; color:#00ff99; text-align:center; padding:40px 20px;">
+  <h2 style="font-family:'Orbitron',sans-serif; font-size:2rem; margin-bottom:20px;">📞 Contact Us</h2>
+  <p style="margin-bottom:10px;">Connect with us on Social Media</p>
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:20px;">
+    
+    <a href="https://instagram.com/CYBER_BOY_H4CK" target="_blank" style="color:#00ff99; font-weight:bold; text-decoration:none;">
+      <img src="assets/icons/instagram.png" alt="Instagram" style="width:40px;"><br>@CYBER_BOY_H4CK
+    </a>
+    
+    <a href="https://t.me/CYBER_BOY_H4CK" target="_blank" style="color:#00ff99; font-weight:bold; text-decoration:none;">
+      <img src="assets/icons/telegram.png" alt="Telegram" style="width:40px;"><br>@CYBER_BOY_H4CK
+    </a>
+    
+    <a href="mailto:jkjavedkh555@gmail.com" style="color:#00ff99; font-weight:bold; text-decoration:none;">
+      <img src="assets/icons/email.png" alt="Email" style="width:40px;"><br>Email Us
+    </a>
+    
+    <a href="https://facebook.com/CYBER_BOY_H4CK" target="_blank" style="color:#00ff99; font-weight:bold; text-decoration:none;">
+      <img src="assets/icons/facebook.png" alt="Facebook" style="width:40px;"><br>Facebook
+    </a>
+    
+  </div>
+</section>
+
+<!-- Feedback Section -->
+<section style="background:#000e0e; color:#00ff99; padding:40px 20px; text-align:center;">
+  <h2 style="font-family:'Orbitron',sans-serif; font-size:2rem; margin-bottom:20px;">📝 Send Feedback</h2>
+  <p style="margin-bottom:20px;">Have suggestions or issues? Send us a quick message.</p>
+  
+  <form onsubmit="return sendFeedback()" style="max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px;">
+    <input type="text" id="name" placeholder="Your Name" required
+      style="padding:12px; border-radius:8px; border:1px solid #00ff99; background:#000; color:#00ff99; font-family:'Poppins',sans-serif;">
+    
+    <input type="email" id="email" placeholder="Your Email" required
+      style="padding:12px; border-radius:8px; border:1px solid #00ff99; background:#000; color:#00ff99; font-family:'Poppins',sans-serif;">
+    
+    <textarea id="message" placeholder="Your Message" required rows="4"
+      style="padding:12px; border-radius:8px; border:1px solid #00ff99; background:#000; color:#00ff99; font-family:'Poppins',sans-serif;"></textarea>
+    
+    <button type="submit"
+      style="padding:12px; background:#00ff99; color:#000; font-weight:bold; border:none; border-radius:8px; cursor:pointer;">Send via WhatsApp</button>
+  </form>
+</section>
+
+<script>
+  function sendFeedback() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappMessage = `*Cyber Boy Feedback*\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Message: ${message}`;
+    const url = "https://wa.me/+917037708398?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+    return false; // prevent form submit
+  }
+</script>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Cyber Boy. All rights reserved.</p>
+</footer>
+  <!-- Footer -->
+  
+  </footer>
+
+  <script>
+    function goToTools() {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+      if (isLoggedIn === "true") {
+        window.location.href = "tools.html";
+      } else {
+        alert("🔒 Please login to access tools.");
+        window.location.href = "login.html";
+      }
+    }
+    
+  
+  </script>
+  
+<!-- 🎧 Hacker Voice Welcome -->
+<audio id="cyberAudio" preload="auto">
+  <source src="assets/audio/welcome_hacker.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- 🔇 Mute/Unmute Toggle -->
+<div id="audioControl" onclick="toggleAudio()" style="
+  position:fixed; bottom:20px; right:20px;
+  background:#00ff99; color:#000;
+  padding:10px 15px; border-radius:10px;
+  cursor:pointer; font-weight:bold; z-index:999;">
+  🔊 Mute
+</div>
+
+<script>
+  const audio = document.getElementById('cyberAudio');
+  const btn = document.getElementById('audioControl');
+
+  // Try to autoplay after user interacts
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      audio.play().catch(() => {
+        // show play button if autoplay blocked
+        btn.innerText = '▶️ Play';
+      });
+    }, 1000);
+  });
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      btn.innerText = '🔊 Mute';
+    } else {
+      audio.pause();
+      btn.innerText = '▶️ Play';
+    }
+  }
+</script>
+
+<!-- Cyber Cube with Heavy Smoke -->
+<section style="background:#000e0e; padding:80px 0; text-align:center; position:relative; overflow:hidden;">
+  <div class="cube-container">
+    <div class="cube">
+      <div class="face front">CYBER</div>
+      <div class="face back">BOY</div>
+      <div class="face right">HACK</div>
+      <div class="face left">TOOLS</div>
+      <div class="face top">💻</div>
+      <div class="face bottom">☠️</div>
+    </div>
+  </div>
+
+  <!-- MULTIPLE SMOKE LAYERS -->
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+</section>
+
+<style>
+.cube-container {
+  perspective: 1000px;
+}
+
+.cube {
+  position: relative;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  animation: spinCube 6s infini: ;te linear;
+}
+
+.face {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(0,255,153,0.07);
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  line-height: 120px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ff99;
+}
+
+.front  { transform: rotateY(0deg) translateZ(60px); }
+.back   { transform: rotateY(180deg) translateZ(60px); }
+.right  { transform: rotateY(90deg) translateZ(60px); }
+.left   { transform: rotateY(-90deg) translateZ(60px); }
+.top    { transform: rotateX(90deg) translateZ(60px); }
+.bottom { transform: rotateX(-90deg) translateZ(60px); }
+
+@keyframes spinCube {
+  0%   { transform: rotateX(0) rotateY(0); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* HEAVY SMOKE */
+.smoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(ellipse at center, rgba(0,255,153,0.2) 0%, rgba(0,255,153,0) 80%);
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.smoke1 {
+  animation: smokeRise 4s ease-in-out infinite;
+}
+.smoke2 {
+  animation: smokeRise 5s ease-in-out infinite;
+  opacity: 0.3;
+}
+.smoke3 {
+  animation: smokeRise 6s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+@keyframes smokeRise {
+  0% { transform: translate(-50%, -60%) scale(1); opacity: 0.4; }
+  50% { transform: translate(-50%, -140%) scale(1.5); opacity: 0.05; }
+  100% { transform: translate(-50%, -60%) scale(1); opacity: 0.4; }
+}
+</style>
+<script>
+  function checkLogin(toolPage) {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+      window.location.href = toolPage;
+    } else {
+      alert("🔐 Please login to access this tool.");
+      window.location.href = "login.html";
+    }
+  }
+  
+  function goToTools() {
+    const isLoggedIn = localStorage.getItem("loggedIn");
+    if (isLoggedIn === "true") {
+      window.location.href = "tools.html";
+    } else {
+      alert("🔐 Please login to view tools.");
+      window.location.href = "login.html";
+    }
+  }
+</script>
+</body>
+</html>

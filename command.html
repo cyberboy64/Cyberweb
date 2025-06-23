@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Command Guide | Cyber Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000e0e;
+      font-family: 'Poppins', sans-serif;
+      color: #00ff99;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tool-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .tool-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00ff99;
+    }
+
+    .command-list {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(0, 255, 153, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00ff99;
+    }
+
+    .command {
+      background: rgba(0, 255, 153, 0.1);
+      border: 1px solid #00ff99;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .command h3 {
+      margin: 0 0 10px;
+      color: #00ffcc;
+    }
+
+    .command code {
+      background: #000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #00ff99;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tool-header">
+    <h1>⚙️ Linux Command Guide</h1>
+  </div>
+
+  <div class="command-list">
+    <div class="command">
+      <h3>List files and directories</h3>
+      <code>ls -la</code>
+    </div>
+
+    <div class="command">
+      <h3>Change Directory</h3>
+      <code>cd /path/to/folder</code>
+    </div>
+
+    <div class="command">
+      <h3>Check Current Directory</h3>
+      <code>pwd</code>
+    </div>
+
+    <div class="command">
+      <h3>Update System</h3>
+      <code>sudo apt update && sudo apt upgrade</code>
+    </div>
+
+    <div class="command">
+      <h3>Install Package</h3>
+      <code>sudo apt install packagename</code>
+    </div>
+
+    <div class="command">
+      <h3>View Running Processes</h3>
+      <code>top</code>
+    </div>
+
+    <div class="command">
+      <h3>Clear Terminal</h3>
+      <code>clear</code>
+    </div>
+  </div>
+</body>
+</html>

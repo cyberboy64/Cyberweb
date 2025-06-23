@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Boy | Tools</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <script type="module" src="authGuard.js"></script>
+  <style>
+    body {
+      background: #000e0e;
+      color: #00ff99;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.8);
+      border-bottom: 2px solid #00ff99;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    header .logo h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff99;
+    }
+
+    nav a {
+      color: #00ff99;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00ff99;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 20px #00ff99;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .tool-card {
+      background: rgba(0, 255, 153, 0.05);
+      border: 1px solid #00ff99;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px #00ff99;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tool-card:hover {
+      background: rgba(0, 255, 153, 0.15);
+      transform: scale(1.03);
+    }
+
+    .tool-card img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .tool-card h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #00ff99;
+      background: #000;
+      color: #00ff99;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Cyber Boy" />
+      <h1>Cyber Boy</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html" class="active">Tools</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>🛠️ All Premium Hacking Tools</h2>
+    <p>Educational tools only. Login required to access any feature.</p>
+  </section>
+
+  <section class="tools-grid">
+
+    <!-- Existing tools -->
+    <div class="tool-card" onclick="checkLogin('simcard.html')">
+      <img src="assets/icons/simcard.png" alt="Sim Info" />
+      <h3>SIM Info Finder</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('phone.html')">
+      <img src="assets/icons/phone.png" alt="Phone Tracker" />
+      <h3>Phone Tracker</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('car.html')">
+      <img src="assets/icons/car.png" alt="Vehicle Tracker" />
+      <h3>Vehicle Info Tracker</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('upi.html')">
+      <img src="assets/icons/upi.png" alt="UPI Checker" />
+      <h3>UPI ID Checker</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('whatsapp.html')">
+      <img src="assets/icons/whatsapp.png" alt="WhatsApp" />
+      <h3>WhatsApp Tools</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('lookup.html')">
+      <img src="assets/icons/lookup.png" alt="Number Lookup" />
+      <h3>Number Lookup</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('command.html')">
+      <img src="assets/icons/command.png" alt="Command Guide" />
+      <h3>Command Guide</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('websecurity.html')">
+      <img src="assets/icons/websecurity.png" alt="Web Security" />
+      <h3>Web Security</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('darkweb.html')">
+      <img src="assets/icons/darkweb.png" alt="Dark Web" />
+      <h3>Dark Web Access</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('recovery.html')">
+      <img src="assets/icons/recovery.png" alt="Data Recovery" />
+      <h3>Data Recovery</h3>
+    </div>
+
+    <div class="tool-card" onclick="checkLogin('email.html')">
+      <img src="assets/icons/email.png" alt="Email Finder" />
+      <h3>Email Finder</h3>
+    </div>
+
+    <!-- WhatsApp Unban Tool -->
+    <div class="tool-card" onclick="window.open('https://wp-unban-tool.vercel.app/#methods', '_blank')">
+      <img src="assets/icons/whatsapp.png" alt="WhatsApp Unban" />
+      <h3>WhatsApp Unban Tool</h3>
+    </div>
+
+    <!-- Location Tracker -->
+    <div class="tool-card" onclick="window.open('https://ip-info-tool-seven.vercel.app/', '_blank')">
+      <img src="assets/icons/location.png" alt="Location Tracker" />
+      <h3>Location Tracker</h3>
+    </div>
+
+    <!-- Colour Prediction Hack -->
+    <div class="tool-card" onclick="window.open('https://wingo-ai-prediction-tool.vercel.app/', '_blank')">
+      <img src="assets/icons/colour.png" alt="Colour Prediction" />
+      <h3>Colour Prediction Hack</h3>
+    </div>
+
+    <!-- Image Text Extract -->
+    <div class="tool-card" onclick="window.open('https://image-text-extractor-omega.vercel.app/', '_blank')">
+      <img src="assets/icons/ocr.png" alt="OCR Tool" />
+      <h3>Image Text Extract</h3>
+    </div>
+
+    <!-- Image Information -->
+    <div class="tool-card" onclick="window.open('https://image-video-loacter-tool.vercel.app/', '_blank')">
+      <img src="assets/icons/imageinfo.png" alt="Image Info Tool" />
+      <h3>Image Information</h3>
+    </div>
+
+    <!-- Teen Patti Hack -->
+    <div class="tool-card" onclick="window.open('https://teenpatti-hack.vercel.app/', '_blank')">
+      <img src="assets/icons/teenpatti.png" alt="Teen Patti Hack" />
+      <h3>Teen Patti Hack</h3>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Cyber Boy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function checkLogin(toolPage) {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+      if (isLoggedIn === "true") {
+        window.location.href = toolPage;
+      } else {
+        alert("🔒 Please login to access this tool.");
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+  
+  <canvas id="cyberCanvas"></canvas>
+
+<script>
+const canvas = document.getElementById("cyberCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = 300;
+
+let particlesArray = [];
+const colors = ["#00ff66", "#ff0033"]; // Green & Red
+
+class Particle {
+  constructor(){
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 3 + 1;
+    this.baseX = this.x;
+    this.baseY = this.y;
+    this.dx = (Math.random() - 0.5) * 1;
+    this.dy = (Math.random() - 0.5) * 1;
+    this.color = colors[Math.floor(Math.random() * colors.length)];
+  }
+  draw(){
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.shadowColor = this.color;
+    ctx.shadowBlur = 10;
+    ctx.fill();
+  }
+  update(){
+    this.x += this.dx;
+    this.y += this.dy;
+
+    if (this.x < 0 || this.x > canvas.width) this.dx *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.dy *= -1;
+
+    this.draw();
+  }
+}
+
+function init(){
+  particlesArray = [];
+  for (let i = 0; i < 100; i++){
+    particlesArray.push(new Particle());
+  }
+}
+init();
+
+function animate(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for(let i = 0; i < particlesArray.length; i++){
+    particlesArray[i].update();
+
+    for(let j = i; j < particlesArray.length; j++){
+      let dx = particlesArray[i].x - particlesArray[j].x;
+      let dy = particlesArray[i].y - particlesArray[j].y;
+      let distance = Math.sqrt(dx*dx + dy*dy);
+      if (distance < 100){
+        ctx.beginPath();
+        ctx.strokeStyle = particlesArray[i].color;
+        ctx.lineWidth = 0.5;
+        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+        ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = 300;
+  init();
+});
+</script>
+  <!-- Paste this just below <section class="hero"> -->
+<div class="cyber-tagline">
+  <span id="typing"></span>
+</div>
+
+<style>
+.cyber-tagline {
+  text-align: center;
+  margin-top: -10px;
+  font-size: 1.4rem;
+  color: #00ffcc;
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 0 10px #00ffcc;
+  min-height: 40px;
+}
+</style>
+
+<script>
+const phrases = [
+  "🔐 Unlock Hidden Tools",
+  "🚀 Hack the Limits, Ethically",
+  "💻 Cyber Boy: Power in Your Hands",
+  "🛠️ Learn. Hack. Repeat.",
+  "⚡ 100% Working Premium Tools"
+];
+let i = 0;
+let j = 0;
+let currentPhrase = [];
+let isDeleting = false;
+let isEnd = false;
+
+function loop () {
+  isEnd = false;
+  document.getElementById('typing').innerHTML = currentPhrase.join('');
+
+  if (i < phrases.length) {
+
+    if (!isDeleting && j <= phrases[i].length) {
+      currentPhrase.push(phrases[i][j]);
+      j++;
+      document.getElementById('typing').innerHTML = currentPhrase.join('');
+    }
+
+    if(isDeleting && j <= phrases[i].length){
+      currentPhrase.pop(phrases[i][j]);
+      j--;
+      document.getElementById('typing').innerHTML = currentPhrase.join('');
+    }
+
+    if (j == phrases[i].length) {
+      isEnd = true;
+      isDeleting = true;
+    }
+
+    if (isDeleting && j === 0) {
+      currentPhrase = [];
+      isDeleting = false;
+      i++;
+      if (i === phrases.length) {
+        i = 0;
+      }
+    }
+  }
+  const spedUp = Math.random() * (80 -50) + 50;
+  const normalSpeed = Math.random() * (150 -100) + 100;
+  const time = isEnd ? 1200 : isDeleting ? spedUp : normalSpeed;
+  setTimeout(loop, time);
+}
+
+loop();
+</script>
+
+
+  
+<!-- Add this before <footer> -->
+<canvas id="cyberCanvas"></canvas>
+
+<style>
+#cyberCanvas {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+  background: transparent;
+}
+</style>
+
+<script>
+const canvas = document.getElementById('cyberCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = 200;
+
+let particlesArray = [];
+
+class Particle {
+  constructor(){
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 1;
+    this.speedX = Math.random() * 0.3 - 0.15;
+    this.speedY = Math.random() * -0.3;
+    this.alpha = Math.random();
+  }
+  update(){
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.y < 0) {
+      this.y = canvas.height;
+      this.x = Math.random() * canvas.width;
+    }
+  }
+  draw(){
+    ctx.fillStyle = 'rgba(0, 255, 153,' + this.alpha + ')';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function init(){
+  particlesArray = [];
+  for (let i = 0; i < 150; i++){
+    particlesArray.push(new Particle());
+  }
+}
+
+function animate(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particlesArray.length; i++){
+    particlesArray[i].update();
+    particlesArray[i].draw();
+  }
+  requestAnimationFrame(animate);
+}
+
+init();
+animate();
+</script>
+
+<canvas id="matrixCanvas"></canvas>
+
+<style>
+  #matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%^&*@".split("");
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  
+  const drops = [];
+  for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+  }
+  
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = "#00FF99";
+    ctx.font = fontSize + "px monospace";
+    
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters[Math.floor(Math.random() * letters.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      
+      drops[i]++;
+    }
+  }
+  
+  setInterval(draw, 33);
+  
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+
+</body>
+</html>
